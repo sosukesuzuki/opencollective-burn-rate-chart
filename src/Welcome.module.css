@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.container p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.browseButton {
+  background-color: #339af0;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.browseButton:hover {
+  background-color: #1c7ed6;
+}
+
+.browseButton:active {
+  background-color: #1864ab;
+}

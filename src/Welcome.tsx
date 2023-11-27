@@ -1,14 +1,21 @@
+import styles from "./Welcome.module.css";
+
 function Welcome({ onBrowse }: { onBrowse: (file: File) => void }) {
   return (
-    <div>
+    <div className={styles.container}>
+      <p>Welcome to the OpenCollective Burn Rate Chart.</p>
       <p>
-        Welcome to the OpenCollective Burn Rate Chart. Use it to create a burn
-        rate chart based on CSV data downloaded from{" "}
+        Use it to create a burn rate chart based on CSV data downloaded from{" "}
         <a href="https://opencollective.com">OpenCollective</a>.
       </p>
+      <label className={styles.browseButton} htmlFor="file-uploader">
+        Browse
+      </label>
       <input
+        id="file-uploader"
         type="file"
         accept=".csv"
+        style={{ display: "none" }}
         onChange={(event) => {
           if (
             event.target.files === null ||

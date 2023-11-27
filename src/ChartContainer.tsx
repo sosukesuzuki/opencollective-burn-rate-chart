@@ -1,3 +1,4 @@
+import styles from "./ChartContainer.module.css";
 import { lazy } from "react";
 
 const Chart = lazy(() =>
@@ -28,9 +29,9 @@ function ChartContainer({
   if (parsedCSV !== null) {
     return (
       <div>
-        <p>
-          <button onClick={clear}>Back</button>
-        </p>
+        <button className={styles.backButton} onClick={clear}>
+          Back
+        </button>
         <Chart data={parsedCSV} />
       </div>
     );
