@@ -32,7 +32,7 @@ function Chart({ data }: { data: unknown[] }) {
       labels: dates,
       datasets: [
         {
-          label: "Burn Rate",
+          label: "balance",
           data: balances,
           fill: false,
           backgroundColor: "rgb(75, 192, 192)",
